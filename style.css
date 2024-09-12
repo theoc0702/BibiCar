@@ -84,18 +84,14 @@ header .logo:hover {
 }
 
 .container .text h2 span {
-    color: #f8db1b;
+    color: #ffffff;
     font-size: clamp(1.8rem, 2.8vw, 3.5rem);
     font-weight: 900;
     transition: color 0.3s ease-in-out;
     animation: colorPulse 2s infinite;
+    text-shadow: 0 0 10px #f8db1b, 0 0 20px #f8db1b, 0 0 30px #f8db1b;
 }
 
-@keyframes colorPulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.7; }
-    100% { opacity: 1; }
-}
 
 .container .text p {
     color: #333;
