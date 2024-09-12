@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BibiCar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#">
+                <img src="media/logo.png" class="logo" alt="Logo BibiCar">
+            </a>
+        </header>
+        <div class="container">
+            <div class="text">
+                <h2>Bibicar votre passion <span>Automobile</span></h2>
+                <p>Chez Bibicar, nous sommes passionnés par les voitures sous toutes leurs formes. Des élégantes berlines aux puissantes sportives, en passant par les robustes SUV, nous offrons une gamme complète pour tous les amateurs d'automobiles. Nos véhicules allient performance, confort et style, pour une expérience de conduite incomparable. Que vous recherchiez l'adrénaline des circuits ou le plaisir des balades en famille, Bibicar a la voiture parfaite pour vous.</p>
+                <a href="mailto:theobea@gmail.com" id="contactButton">Nous contacter</a>
+            </div>
+            <div class="imgbox">
+                <img src="media/Celica.png" class="Celica" alt="Toyota Celica">
+            </div>
+        </div>
+        <ul class="catalogue">
+            <li>
+                <img src="media/Celica.png" onclick="imgSlider('media/Celica.png'); changecirclecolor('#f8db1b'); changetextcolor('#f8db1b'); changeButtonStyle('#f8db1b', '#333'); resetSocialIcons()" alt="Toyota Celica">
+                <img src="media/RX7.png" onclick="imgSlider('media/RX7.png'); changecirclecolor('#FFA500'); changetextcolor('#FFA500'); changeButtonStyle('#FFA500', '#333'); resetSocialIcons()" alt="Mazda RX7">
+                <img src="media/GT3.png" onclick="imgSlider('media/GT3.png'); changecirclecolor('#ff0000'); changetextcolor('#ff0000'); changeButtonStyle('#ff0000', '#333'); resetSocialIcons()" alt="Porsche GT3">
+                <img src="media/E39.png" onclick="imgSlider('media/E39.png'); changecirclecolor('#191970'); changetextcolor('#191970'); changeButtonStyle('#191970', '#fff'); invertSocialIcons()" alt="BMW E39">
+            </li>
+        </ul>
+        <ul class="reseau">
+            <li><a href="https://www.instagram.com/chellyt371/?next=%2F"><img src="media/insta.png" alt="Instagram"></a></li>
+            <li><a href="https://www.linkedin.com/in/th%C3%A9o-chelly-7ab668308/"><img src="media/linkedin.png" alt="Linkedin"></a></li>
+            <li><a href="https://github.com/theoc0702"><img src="media/github.png" alt="Github"></a></li>
+        </ul>
+    </section>
+    <script>
+        function imgSlider(anything) {
+            document.querySelector('.Celica').src = anything;
+        }
+        function changecirclecolor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+        function changetextcolor(color) {
+            const text = document.querySelector('.text h2 span');
+            text.style.color = color;
+        }
+        function changeButtonStyle(bgColor, textColor) {
+            const button = document.getElementById('contactButton');
+            button.style.backgroundColor = bgColor;
+            button.style.color = textColor;
+        }
+        function invertSocialIcons() {
+            const socialIcons = document.querySelectorAll('.reseau img');
+            socialIcons.forEach(icon => {
+                icon.style.filter = 'invert(100%)';
+            });
+        }
+        function resetSocialIcons() {
+            const socialIcons = document.querySelectorAll('.reseau img');
+            socialIcons.forEach(icon => {
+                icon.style.filter = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
+ 
