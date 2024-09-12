@@ -84,7 +84,7 @@ header .logo:hover {
 }
 
 .container .text h2 span {
-    color: #ffffff;
+    color: #fff;
     font-size: clamp(1.8rem, 2.8vw, 3.5rem);
     font-weight: 900;
     transition: color 0.3s ease-in-out;
@@ -104,7 +104,7 @@ header .logo:hover {
     margin-top: 20px;
     padding: 8px 20px;
     background: #f8db1b;
-    color: #fff;
+    color: #333;
     border-radius: 40px;
     text-decoration: none;
     font-size: clamp(0.8rem, 1vw, 1.2rem);
@@ -362,5 +362,6 @@ header .logo:hover {
 
     .container .text a {
         font-size: clamp(0.8rem, 3vw, 1rem);
+        color: #333;
     }
 }
